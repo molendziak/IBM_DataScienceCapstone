@@ -75,7 +75,6 @@ def get_pie_chart(entered_site):
               Input(component_id='site-dropdown', component_property='value'), 
               Input(component_id="payload-slider", component_property="value"))
 def get_scatter_chart(entered_site, payload_range):
-    print('Params: {} {}'.format(entered_site, payload_range))
     if entered_site == 'ALL':
         filtered_df = spacex_df[(spacex_df['Payload Mass (kg)'] >= int(payload_range[0])) &
                                 (spacex_df['Payload Mass (kg)'] <= int(payload_range[1]))
